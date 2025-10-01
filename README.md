@@ -3,9 +3,7 @@
 The IITD Library, which houses thousands of rare books, is being digitized to make resources more accessible and searchable. To achieve this, the library requires:
 A compressed dictionary per book containing only its words.
 
-
 A search system to find relevant books containing a given keyword.
-
 To implement this, we use two different approaches:
 
 Musk’s Method (Sorting with MergeSort)
@@ -45,17 +43,29 @@ search_keyword(keyword)
 print_books()
 
 MuskLibrary (Sorting-based)
-
-Uses MergeSort to extract distinct words.
-
-Words are stored in lexicographically sorted order.
-
-All books and texts are provided at initialization.
+- Uses MergeSort to extract distinct words.
+- Words are stored in lexicographically sorted order.
+- All books and texts are provided at initialization.
 
 JGBLibrary (Hashing-based)
+- Uses a chosen hash table implementation (Jobs/Gates/Bezos).
+- Books are added one at a time.
+- Words stored in the order they appear in the hash table.
 
-Uses a chosen hash table implementation (Jobs/Gates/Bezos).
+🚀 Features
 
-Books are added one at a time.
+- Custom Hash Table implementations with multiple collision resolution strategies.
+- Dynamic resizing for efficiency.
+- Support for distinct word extraction, word count, and keyword-based book search.
+- Modular & extensible design for easy testing and debugging.
 
-Words stored in the order they appear in the hash table.
+📌 Constraints
+
+- Do not use built-in dict or set.
+- Do not import external libraries.
+- Follow the function signatures and print formats exactly, or autograding may fail.
+
+🕒 Complexity (Expected)
+
+MuskLibrary: Sorting-based complexities (e.g., O(W log W) for distinct words).
+JGBLibrary: Hash-based complexities (e.g., O(|key|) per insert/find).
